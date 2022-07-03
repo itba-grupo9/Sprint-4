@@ -5,11 +5,12 @@ import sys
 # Tomar los argumentos de la línea de comandos y asignarlos a variables.
 argumentos = sys.argv
 if len(argumentos) > 1:
-	dni = argumentos[1]
-	salida = argumentos[2].upper()
-	tipo_de_cheque = argumentos[3].upper()
-	estado = argumentos[4].upper()
-	rango_fecha = argumentos[5].upper()
+	nombre_archivo_csv = argumentos[1]
+	dni = argumentos[2]
+	salida = argumentos[3].upper()
+	tipo_de_cheque = argumentos[4].upper()
+	estado = argumentos[5].upper()
+	rango_fecha = argumentos[6].upper()
 # Imprimiendo el mensaje de error y poniendo las variables en valores por defecto.
 else:
 	print('debe ingresar un dni válido')
