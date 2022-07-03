@@ -33,7 +33,7 @@ timestamp1 = int(datetime.timestamp(primera_fecha))
 timestamp2 = int(datetime.timestamp(segunda_fecha))
 
 # Leer el archivo csv y añadir las líneas que coinciden con las condiciones a la lista info_cheque.
-with open('test_itbank.csv', 'r') as file:
+with open(f'{nombre_archivo_csv}', 'r') as file:
 	lineas = csv.reader(file)
 	info_cheque = []
 
@@ -63,3 +63,6 @@ elif salida == 'CSV':
 	with open(f"{dni}-{tiempo}.csv", 'w') as csv_file:
 		csv_file.write(str(info_cheque))
 	print(tiempo)
+
+# ejemplo de como ingresar los datos
+# py listado_chesques.py test_itbank.csv 23665789 pantalla emitido non 03/05/2021:05/05/2021
